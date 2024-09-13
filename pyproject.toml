@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bookmarks"
+version = "0.0.1"
+description = "A functional bookmark manager"
+authors = [
+    { name = "walter", email = "" },
+]
+
+requires = ["BeautifulSoup4"]
+
+[tool.setuptools]
+packages = ["bookmarks"]
+install_requires = []
+
+[tool.ruff]
+line-length = 80
+
+[tool.ruff.lint]
+extend-select = ["E501"]
+select = ["E", "F", "Q", "TD"]
+
+[tool.hatch.envs.myenv]
+type = "virtual"
+path = "venv"
